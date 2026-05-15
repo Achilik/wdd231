@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "TechNova Solutions",
+            "address": "12 Victoria Island, Lagos",
+            "phone": "+234 801 111 1111",
+            "website": "https://technova.com",
+            "image": "business1.webp",
+            "membership": 3
+        },
+        {
+            "name": "Green Farms Ltd",
+            "address": "22 Ikeja, Lagos",
+            "phone": "+234 802 222 2222",
+            "website": "https://greenfarms.com",
+            "image": "business2.webp",
+            "membership": 2
+        },
+        {
+            "name": "Ocean View Hotel",
+            "address": "5 Lekki Phase 1",
+            "phone": "+234 803 333 3333",
+            "website": "https://oceanview.com",
+            "image": "business3.webp",
+            "membership": 1
+        },
+        {
+            "name": "Lagos Fashion House",
+            "address": "18 Surulere, Lagos",
+            "phone": "+234 804 444 4444",
+            "website": "https://lagosfashion.com",
+            "image": "business4.webp",
+            "membership": 2
+        },
+        {
+            "name": "Prime Logistics",
+            "address": "9 Apapa, Lagos",
+            "phone": "+234 805 555 5555",
+            "website": "https://primelogistics.com",
+            "image": "business5.webp",
+            "membership": 3
+        },
+        {
+            "name": "City Bakery",
+            "address": "14 Yaba, Lagos",
+            "phone": "+234 806 666 6666",
+            "website": "https://citybakery.com",
+            "image": "business6.webp",
+            "membership": 1
+        },
+        {
+            "name": "Elite Motors",
+            "address": "30 Ikoyi, Lagos",
+            "phone": "+234 807 777 7777",
+            "website": "https://elitemotors.com",
+            "image": "business7.webp",
+            "membership": 3
+        }
+    ]
+}
