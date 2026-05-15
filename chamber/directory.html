@@ -7,20 +7,29 @@
     <title>Lagos Chamber of Commerce Directory</title>
 
     <meta name="description" content="Lagos Chamber of Commerce business directory showcasing local businesses and organizations.">
-    <meta name="author" content="Achilike Samuel Nwaokonko">
+    <meta name="author" content="Achilike">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Lagos Chamber of Commerce">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lagos Chamber of Commerce Directory">
     <meta property="og:description" content="Explore businesses in the Lagos Chamber of Commerce directory.">
     <meta property="og:image" content="https://yourdomain.com/chamber/images/logo.webp">
     <meta property="og:url" content="https://yourdomain.com/chamber/directory.html">
 
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
+    <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/directory.js" defer></script>
     <script src="scripts/date.js" defer></script>
@@ -30,11 +39,15 @@
 
 <header>
     <div class="logo-container">
-        <img src="images/logo.webp" alt="Lagos Chamber Logo" width="80" height="80">
-        <h1>Lagos Chamber of Commerce</h1>
+        <img src="images/logo.jpg" alt="Lagos Chamber Logo" width="80" height="80">
+
+        <div>
+            <p class="site-name">Lagos Chamber</p>
+            <p class="site-tagline">Commerce Directory</p>
+        </div>
     </div>
 
-    <button id="menu"></button>
+    <button id="menu" aria-label="Toggle Navigation"></button>
 
     <nav class="navigation">
         <a href="directory.html" class="active">Directory</a>
@@ -44,7 +57,8 @@
 </header>
 
 <main>
-    <h2>Business Directory</h2>
+
+    <h1>Lagos Chamber of Commerce Directory</h1>
 
     <div class="view-buttons">
         <button id="grid">Grid View</button>
@@ -52,9 +66,11 @@
     </div>
 
     <section id="members" class="grid"></section>
+
 </main>
 
 <footer>
+
     <div class="footer-info">
         <p><strong>Lagos Chamber of Commerce</strong></p>
         <p>10 Marina Road, Lagos, Nigeria</p>
@@ -63,9 +79,14 @@
     </div>
 
     <div class="footer-dev">
-        <p>&copy; <span id="currentyear"></span> Achilike Samuel Nwaokonko|WDD 231</p>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Achilike | WDD 231
+        </p>
+
         <p id="lastModified"></p>
     </div>
+
 </footer>
 
 </body>
