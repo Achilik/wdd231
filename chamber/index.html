@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lagos Chamber of Commerce</title>
+
+  <meta
+    name="description"
+    content="Official Lagos Chamber of Commerce website featuring local business spotlights, weather updates, events, and community resources."
+  />
+
+  <meta name="author" content="Your Name" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lagos Chamber of Commerce" />
+  <meta
+    property="og:description"
+    content="Connecting businesses and strengthening the Lagos business community."
+  />
+  <meta
+    property="og:image"
+    content="https://achilik.github.io/wdd231/chamber/directory.html"
+  />
+  <meta
+    property="og:url"
+    content="https://achilik.github.io/wdd231/chamber/directory.html"
+  />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.ico" />
+
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-box">
+      <img src="images/logo.jpg"Lagos Chamber Logo" width="80" height="80" />
+      <div>
+        <h1>Lagos Chamber</h1>
+        <p>Commerce & Business Network</p>
+      </div>
+    </div>
+
+    <button id="menu-btn" aria-label="Open navigation menu"></button>
+
+    <nav id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="discover.html">Discover</a>
+      <a href="join.html">Join</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/hero-large.webp" />
+        <img
+          src="images/hero-small.webp"
+          alt="Lagos city business skyline"
+          loading="eager"
+          width="1200"
+          height="600"
+        />
+      </picture>
+
+      <div class="hero-content">
+        <h2>Building Business Together</h2>
+        <p>Connecting entrepreneurs, organizations, and opportunities.</p>
+
+        <a href="join.html" class="cta-btn">
+          Join the Chamber
+        </a>
+      </div>
+    </section>
+
+    <!-- HOME GRID -->
+    <section class="home-grid">
+
+      <!-- EVENTS -->
+      <section class="card">
+        <h2>Current Events</h2>
+
+        <article class="event">
+          <h3>Business Networking Summit</h3>
+          <p>
+            Join local entrepreneurs and business leaders this Friday
+            at the Lagos Civic Center for our monthly networking summit.
+          </p>
+        </article>
+
+        <article class="event">
+          <h3>Digital Marketing Workshop</h3>
+          <p>
+            Learn practical strategies to grow your business online
+            with industry experts.
+          </p>
+        </article>
+      </section>
+
+      <!-- WEATHER -->
+      <section class="card weather-card">
+        <h2>Weather</h2>
+
+        <div class="current-weather">
+          <p class="temp">
+            <span id="current-temp"></span>°C
+          </p>
+
+          <p id="weather-desc"></p>
+        </div>
+
+        <div class="forecast">
+          <div class="forecast-day">
+            <h3 id="day1"></h3>
+            <p id="temp1"></p>
+          </div>
+
+          <div class="forecast-day">
+            <h3 id="day2"></h3>
+            <p id="temp2"></p>
+          </div>
+
+          <div class="forecast-day">
+            <h3 id="day3"></h3>
+            <p id="temp3"></p>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- SPOTLIGHTS -->
+    <section class="spotlights">
+      <h2>Business Spotlights</h2>
+
+      <div id="spotlight-container"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <h3>Lagos Chamber of Commerce</h3>
+      <p>10 Marina Street, Lagos, Nigeria</p>
+      <p>Email: info@lagoschamber.org</p>
+      <p>Phone: +234 800 123 4567</p>
+    </div>
+
+    <div>
+      <p>
+        &copy; <span id="year"></span>
+        Lagos Chamber of Commerce
+      </p>
+
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("lastModified").textContent =
+      `Last Modified: ${document.lastModified}`;
+  </script>
+</body>
+</html>

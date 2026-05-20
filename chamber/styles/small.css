@@ -4,10 +4,22 @@
     --accent-color: #fcbf49;
     --background-color: #f8f9fa;
     --text-color: #222;
+    --white: #ffffff;
+
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --radius: 10px;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,12 +27,43 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
+
+    display: grid;
+    grid-template-columns: auto 44px;
+    align-items: center;
 }
 
 .logo-container {
@@ -29,9 +72,17 @@ header {
     gap: 1rem;
 }
 
+.logo-container img {
+    width: 80px;
+    border-radius: 8px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
 #menu {
     display: block;
-    margin-top: 1rem;
     background: none;
     border: none;
     color: white;
@@ -50,6 +101,7 @@ header {
 .navigation {
     display: none;
     flex-direction: column;
+    grid-column: 1 / -1;
 }
 
 .navigation.open {
@@ -58,8 +110,9 @@ header {
 
 .navigation a {
     padding: 1rem;
-    text-decoration: none;
     color: white;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    transition: background-color 0.3s ease;
 }
 
 .navigation a:hover,
@@ -67,9 +120,173 @@ header {
     background-color: var(--secondary-color);
 }
 
-main {
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+    color: white;
+
     padding: 1rem;
 }
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    margin-bottom: 1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+
+    padding: 0.8rem 1.5rem;
+
+    border-radius: 8px;
+    font-weight: bold;
+
+    transition: opacity 0.3s ease;
+}
+
+.cta-btn:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   HOME GRID
+========================= */
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.event {
+    margin-bottom: 1rem;
+}
+
+.event h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+   WEATHER
+========================= */
+
+.weather-card {
+    text-align: center;
+}
+
+.current-weather {
+    margin-bottom: 1rem;
+}
+
+.temp {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.forecast {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.forecast-day {
+    background-color: var(--background-color);
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+/* =========================
+   SPOTLIGHTS
+========================= */
+
+.spotlights {
+    margin-bottom: 2rem;
+}
+
+.spotlights h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.spotlight-card img {
+    width: 150px;
+    margin: 1rem auto;
+}
+
+.spotlight-card h3 {
+    color: var(--primary-color);
+}
+
+.spotlight-card a {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   DIRECTORY PAGE
+========================= */
 
 .view-buttons {
     margin-bottom: 1rem;
@@ -78,10 +295,20 @@ main {
 .view-buttons button {
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
+
     border: none;
+    border-radius: 5px;
+
     cursor: pointer;
+
     background-color: var(--primary-color);
     color: white;
+
+    transition: opacity 0.3s ease;
+}
+
+.view-buttons button:hover {
+    opacity: 0.9;
 }
 
 #members.grid {
@@ -99,19 +326,79 @@ main {
 .member-card {
     background-color: white;
     border: 1px solid #ccc;
+    border-radius: var(--radius);
+
     padding: 1rem;
+
     text-align: center;
+
+    box-shadow: var(--shadow);
 }
 
 .member-card img {
     width: 100%;
     max-width: 250px;
-    height: auto;
+    margin: 0 auto 1rem;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+
+    padding: 2rem 1rem;
+
+    display: grid;
+    gap: 1rem;
+
     text-align: center;
+}
+
+/* =========================
+   LARGE VIEW
+========================= */
+
+@media (min-width: 768px) {
+
+    header {
+        grid-template-columns: auto 1fr;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        border: none;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #members.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
 }
