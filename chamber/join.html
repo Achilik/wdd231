@@ -4,18 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Join | Lagos Chamber of Commerce</title>
+    <!-- Page Title -->
+    <title>Join Lagos Chamber of Commerce Membership</title>
 
-    <meta name="description" content="Apply to join the Lagos Chamber of Commerce.">
+    <!-- SEO Meta -->
+    <meta
+        name="description"
+        content="Apply to join the Lagos Chamber of Commerce and access networking, training, advertising, and business growth opportunities."
+    >
+
     <meta name="author" content="Achilike">
 
+    <!-- Open Graph Meta Tags -->
+    <meta
+        property="og:title"
+        content="Join Lagos Chamber of Commerce Membership"
+    >
+
+    <meta
+        property="og:description"
+        content="Apply for chamber membership to connect with businesses, gain exposure, and enjoy exclusive member benefits in Lagos."
+    >
+
+    <meta
+        property="og:image"
+        content="https://achilik.github.io/wdd231/chamber/images/chamber.webp"
+    >
+
+    <meta
+        property="og:url"
+        content="https://achilik.github.io/wdd231/chamber/join.html"
+    >
+
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -26,18 +62,18 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/join.js" defer></script>
     <script src="scripts/date.js" defer></script>
+
 </head>
 
 <body>
 
 <header>
-   
     <div class="logo-container">
         <img src="images/logo.jpg" alt="Lagos Chamber Logo" width="80" height="80">
 
         <div>
             <p class="site-name">Lagos Chamber</p>
-            <p class="site-tagline">Commerce Directory</p>
+            <p class="site-tagline">Commerce </p>
         </div>
     </div>
 
@@ -51,76 +87,92 @@
     </nav>
 </header>
 
-<nav>
-    <!-- Your navigation here -->
-</nav>
-
 <main class="join-page">
 
+    <!-- REQUIRED SINGLE H1 INSIDE MAIN -->
+    <h1>Join the Lagos Chamber of Commerce</h1>
+
     <section class="form-section">
-        <h2>Membership Application</h2>
+
+        <h2>Membership Application Form</h2>
 
         <form method="get" action="thankyou.html">
 
             <label>
                 First Name
-                <input type="text"
+                <input
+                    type="text"
                     name="first"
                     title="Enter your first name"
                     autocomplete="given-name"
-                    required>
+                    required
+                >
             </label>
 
             <label>
                 Last Name
-                <input type="text"
+                <input
+                    type="text"
                     name="last"
                     title="Enter your last name"
                     autocomplete="family-name"
-                    required>
+                    required
+                >
             </label>
 
             <label>
                 Organizational Title
-                <input type="text"
+                <input
+                    type="text"
                     name="orgtitle"
                     title="Enter your organizational title"
                     autocomplete="organization-title"
-                    pattern="[A-Za-z\-\s]{7,}"
-                    placeholder="Marketing Manager">
+                    pattern="[A-Za-z\\-\\s]{7,}"
+                    placeholder="Marketing Manager"
+                >
             </label>
 
             <label>
                 Email Address
-                <input type="email"
+                <input
+                    type="email"
                     name="email"
                     title="Enter your email address"
                     autocomplete="email"
                     placeholder="example@email.com"
-                    required>
+                    required
+                >
             </label>
 
             <label>
                 Mobile Phone Number
-                <input type="tel"
+                <input
+                    type="tel"
                     name="phone"
                     title="Enter your mobile phone number"
                     autocomplete="tel"
-                    required>
+                    required
+                >
             </label>
 
             <label>
                 Organization Name
-                <input type="text"
+                <input
+                    type="text"
                     name="organization"
                     title="Enter your organization name"
                     autocomplete="organization"
-                    required>
+                    required
+                >
             </label>
 
             <label>
                 Membership Level
-                <select name="membership" title="Select a membership level" required>
+                <select
+                    name="membership"
+                    title="Select a membership level"
+                    required
+                >
                     <option value="">Select Membership</option>
                     <option value="np">NP Membership</option>
                     <option value="bronze">Bronze Membership</option>
@@ -133,73 +185,26 @@
                 Organization Description
                 <textarea
                     name="description"
-                    title="Describe your organization"></textarea>
+                    title="Describe your organization"
+                ></textarea>
             </label>
 
-            <input type="hidden" id="timestamp" name="timestamp">
+            <!-- Hidden Timestamp -->
+            <input
+                type="hidden"
+                id="timestamp"
+                name="timestamp"
+            >
 
-            <input type="submit" value="Apply for Membership" class="submit-btn">
+            <input
+                type="submit"
+                value="Apply for Membership"
+                class="submit-btn"
+            >
 
         </form>
+
     </section>
-
-    <aside class="membership-cards">
-
-        <div class="card">
-            <h3>NP Membership</h3>
-            <p>No fee for nonprofit organizations.</p>
-            <button id="openNP">Learn More</button>
-        </div>
-
-        <div class="card">
-            <h3>Bronze Membership</h3>
-            <p>Basic business exposure and events.</p>
-            <button id="openBronze">Learn More</button>
-        </div>
-
-        <div class="card">
-            <h3>Silver Membership</h3>
-            <p>Advertising and training benefits.</p>
-            <button id="openSilver">Learn More</button>
-        </div>
-
-        <div class="card">
-            <h3>Gold Membership</h3>
-            <p>Premium spotlight and discounts.</p>
-            <button id="openGold">Learn More</button>
-        </div>
-
-    </aside>
-
-    <!-- MODALS -->
-
-    <dialog id="npModal">
-        <h3>NP Membership Benefits</h3>
-        <p>No membership fee.</p>
-        <p>Access to networking events.</p>
-        <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="bronzeModal">
-        <h3>Bronze Membership Benefits</h3>
-        <p>Business directory listing.</p>
-        <p>Event participation discounts.</p>
-        <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="silverModal">
-        <h3>Silver Membership Benefits</h3>
-        <p>Homepage advertising.</p>
-        <p>Training opportunities.</p>
-        <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="goldModal">
-        <h3>Gold Membership Benefits</h3>
-        <p>Premium spotlight advertising.</p>
-        <p>VIP event invitations.</p>
-        <button class="close">Close</button>
-    </dialog>
 
 </main>
 
