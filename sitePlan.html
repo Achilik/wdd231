@@ -1,0 +1,261 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bekpels' Fashion Empire - Site Plan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    :root{
+        --primary:#5A189A;
+        --secondary:#FFD700;
+        --background:#FFFFFF;
+        --text:#333333;
+    }
+
+    body{
+        font-family:'Poppins', sans-serif;
+        background-color:var(--background);
+        color:var(--text);
+        margin:0;
+        padding:20px;
+        line-height:1.6;
+    }
+
+    header{
+        text-align:center;
+        background-color:var(--primary);
+        color:white;
+        padding:30px;
+        border-radius:10px;
+    }
+
+    h1{
+        font-family:'Great Vibes', cursive;
+        font-size:3rem;
+        margin:0;
+    }
+
+    h2{
+        font-family:'Playfair Display', serif;
+        color:var(--primary);
+        border-bottom:3px solid var(--secondary);
+        padding-bottom:5px;
+    }
+
+    section{
+        margin:30px 0;
+    }
+
+    .card{
+        background:#f8f8f8;
+        padding:20px;
+        border-left:6px solid var(--primary);
+        border-radius:8px;
+    }
+
+    ul{
+        padding-left:20px;
+    }
+
+    .color-box{
+        display:inline-block;
+        width:120px;
+        height:40px;
+        margin:10px;
+        border:1px solid #ccc;
+        text-align:center;
+        line-height:40px;
+        font-weight:bold;
+    }
+
+    .wireframe{
+        border:2px solid var(--primary);
+        padding:15px;
+        margin-top:20px;
+        border-radius:8px;
+    }
+
+    .box{
+        border:2px solid #777;
+        padding:15px;
+        margin:8px 0;
+        text-align:center;
+        background:#fafafa;
+    }
+
+    .desktop-row{
+        display:flex;
+        gap:10px;
+    }
+
+    .desktop-row .box{
+        flex:1;
+    }
+
+    footer{
+        background-color:var(--primary);
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:30px;
+        border-radius:10px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Bekpels' Fashion Empire</h1>
+    <p>Website Project Site Plan</p>
+</header>
+
+<section>
+    <h2>Site Name</h2>
+    <div class="card">
+        <p><strong>Bekpels' Fashion Empire</strong></p>
+        <p>
+            This name was selected because it represents a professional
+            fashion school that trains aspiring designers and fashion entrepreneurs.
+            It is memorable, brand-oriented, and clearly communicates the purpose
+            of the organization.
+        </p>
+        <p><strong>Optional Domain:</strong> www.bekpelsfashionempire.com</p>
+    </div>
+</section>
+
+<section>
+    <h2>Site Purpose</h2>
+    <div class="card">
+        <p>
+            The website will provide information about fashion design programs,
+            admission requirements, tuition fees, student projects, and contact
+            information. Visitors will be able to learn about the school,
+            explore student work, and apply for admission online.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Scenarios</h2>
+    <div class="card">
+        <ul>
+            <li>What fashion design courses are available?</li>
+            <li>How do I apply for admission?</li>
+            <li>What are the tuition fees and payment options?</li>
+            <li>How can I contact the school for more information?</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Color Scheme</h2>
+
+    <div class="color-box" style="background:#5A189A;color:white;">
+        Purple
+    </div>
+
+    <div class="color-box" style="background:#FFD700;">
+        Gold
+    </div>
+
+    <div class="card">
+        <p><strong>Deep Purple (#5A189A)</strong> – Headings, navigation, buttons.</p>
+        <p><strong>Gold (#FFD700)</strong> – Accents, highlights, hover effects.</p>
+        <p><strong>White (#FFFFFF)</strong> – Background color.</p>
+        <p><strong>Dark Gray (#333333)</strong> – Body text.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Typography</h2>
+
+    <div class="card">
+        <p style="font-family:'Playfair Display', serif;">
+            Playfair Display – Used for headings.
+        </p>
+
+        <p style="font-family:'Poppins', sans-serif;">
+            Poppins – Used for body text and navigation.
+        </p>
+
+        <p style="font-family:'Great Vibes', cursive; font-size:28px;">
+            Great Vibes – Used for logo and decorative branding.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Wireframe - Mobile View</h2>
+
+    <div class="wireframe">
+        <div class="box">LOGO</div>
+        <div class="box">Navigation Menu</div>
+        <div class="box">Hero Banner</div>
+        <div class="box">About School</div>
+        <div class="box">Programs Offered</div>
+        <div class="box">Student Gallery</div>
+        <div class="box">Admissions Information</div>
+        <div class="box">Contact Form</div>
+        <div class="box">Footer</div>
+    </div>
+</section>
+
+<section>
+    <h2>Wireframe - Desktop View</h2>
+
+    <div class="wireframe">
+
+        <div class="box">
+            LOGO | HOME | ABOUT | PROGRAMS | GALLERY | ADMISSIONS | CONTACT
+        </div>
+
+        <div class="box">HERO BANNER</div>
+
+        <div class="desktop-row">
+            <div class="box">About School</div>
+            <div class="box">Featured Student Designs</div>
+        </div>
+
+        <div class="desktop-row">
+            <div class="box">Programs Offered</div>
+            <div class="box">Admissions Information</div>
+        </div>
+
+        <div class="box">Student Gallery</div>
+
+        <div class="desktop-row">
+            <div class="box">Contact Information</div>
+            <div class="box">Contact Form</div>
+        </div>
+
+        <div class="box">Footer</div>
+    </div>
+</section>
+
+<section>
+    <h2>Testing Plan</h2>
+
+    <div class="card">
+        <ul>
+            <li>Validate HTML using the W3C Markup Validator.</li>
+            <li>Check accessibility using the WAVE Evaluation Tool.</li>
+            <li>Analyze performance, SEO, and best practices using Lighthouse.</li>
+            <li>Verify color contrast using the WebAIM Contrast Checker.</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Bekpels' Fashion Empire Site Plan</p>
+</footer>
+
+</body>
+</html>
+```
